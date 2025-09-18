@@ -33,9 +33,6 @@ public class VideoInfo {
     @JsonProperty("like_count")
     public String likeCount;
 
-    @JsonProperty("dislike_count")
-    public String dislikeCount;
-
     @JsonProperty("repost_count")
     public String repostCount;
 
@@ -174,10 +171,6 @@ public class VideoInfo {
         return likeCount;
     }
 
-    public String getDislikeCount() {
-        return dislikeCount;
-    }
-
     public String getRepostCount() {
         return repostCount;
     }
@@ -191,8 +184,8 @@ public class VideoInfo {
         return "VideoInfo [id=" + id + ", fulltitle=" + fulltitle + ", title=" + title + ", uploadDate=" + uploadDate
                 + ", displayId=" + displayId + ", duration=" + duration + ", description=" + description
                 + ", thumbnail=" + thumbnail + ", license=" + license + ", viewCount=" + viewCount + ", likeCount="
-                + likeCount + ", dislikeCount=" + dislikeCount + ", repostCount=" + repostCount + ", averageRating="
-                + averageRating + ", uploaderId=" + uploaderId + ", uploader=" + uploader + ", playerUrl=" + playerUrl
+                + likeCount + ", repostCount=" + repostCount + ", averageRating=" + averageRating +
+                ", uploaderId=" + uploaderId + ", uploader=" + uploader + ", playerUrl=" + playerUrl
                 + ", webpageUrl=" + webpageUrl + ", webpageUrlBasename=" + webpageUrlBasename + ", resolution="
                 + resolution + ", width=" + width + ", height=" + height + ", format=" + format + ", ext=" + ext
                 + ", httpHeader=" + httpHeader + ", categories=" + categories + ", tags=" + tags + ", formats="
