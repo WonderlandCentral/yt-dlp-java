@@ -1,149 +1,201 @@
 package com.jfposton.ytdlp.mapper;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
+/**
+ * Updated to have more features: <a href="https://github.com/sapher/youtubedl-java/pull/11/">https://github.com/sapher/youtubedl-java/pull/11/</a>
+ * @author memento ^
+ */
+@SuppressWarnings("unused")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class VideoInfo {
+    private String id;
+    private String fulltitle;
+    private String title;
 
-  private String id;
-  private String fulltitle;
-  private String title;
+    @JsonProperty("upload_date")
+    private String uploadDate;
 
-  @JsonProperty("upload_date")
-  private String uploadDate;
+    @JsonProperty("display_id")
+    private String displayId;
 
-  @JsonProperty("display_id")
-  private String displayId;
+    private long duration;
+    private String description;
+    private String thumbnail;
+    private String license;
 
-  private long duration;
-  private String description;
-  private String thumbnail;
-  private String license;
+    @JsonProperty("view_count")
+    public String viewCount;
 
-  @JsonProperty("uploader_id")
-  private String uploaderId;
+    @JsonProperty("like_count")
+    public String likeCount;
 
-  private String uploader;
+    @JsonProperty("dislike_count")
+    public String dislikeCount;
 
-  @JsonProperty("player_url")
-  private String playerUrl;
+    @JsonProperty("repost_count")
+    public String repostCount;
 
-  @JsonProperty("webpage_url")
-  private String webpageUrl;
+    @JsonProperty("average_rating")
+    public String averageRating;
 
-  @JsonProperty("webpage_url_basename")
-  private String webpageUrlBasename;
+    @JsonProperty("uploader_id")
+    private String uploaderId;
 
-  private String resolution;
-  private int width;
-  private int height;
-  private String format;
-  private String ext;
+    private String uploader;
 
-  @JsonProperty("http_headers")
-  private HttpHeader httpHeader;
+    @JsonProperty("player_url")
+    private String playerUrl;
 
-  private List<String> categories;
-  private List<String> tags;
-  private List<VideoFormat> formats;
-  private List<VideoThumbnail> thumbnails;
+    @JsonProperty("webpage_url")
+    private String webpageUrl;
 
-  public String getId() {
-    return id;
-  }
+    @JsonProperty("webpage_url_basename")
+    private String webpageUrlBasename;
 
-  public String getFulltitle() {
-    return fulltitle;
-  }
+    private String resolution;
+    private int width;
+    private int height;
+    private String format;
+    private String ext;
 
-  public String getTitle() {
-    return title;
-  }
+    @JsonProperty("http_headers")
+    private HttpHeader httpHeader;
 
-  public String getUploadDate() {
-    return uploadDate;
-  }
+    private List<String> categories;
+    private List<String> tags;
+    private List<VideoFormat> formats;
+    private List<VideoThumbnail> thumbnails;
 
-  public String getDisplayId() {
-    return displayId;
-  }
+    public String getId() {
+        return id;
+    }
 
-  public long getDuration() {
-    return duration;
-  }
+    public String getFulltitle() {
+        return fulltitle;
+    }
 
-  public String getDescription() {
-    return description;
-  }
+    public String getTitle() {
+        return title;
+    }
 
-  public String getThumbnail() {
-    return thumbnail;
-  }
+    public String getUploadDate() {
+        return uploadDate;
+    }
 
-  public String getLicense() {
-    return license;
-  }
+    public String getDisplayId() {
+        return displayId;
+    }
 
-  public String getUploaderId() {
-    return uploaderId;
-  }
+    public long getDuration() {
+        return duration;
+    }
 
-  public String getUploader() {
-    return uploader;
-  }
+    public String getDescription() {
+        return description;
+    }
 
-  public String getPlayerUrl() {
-    return playerUrl;
-  }
+    public String getThumbnail() {
+        return thumbnail;
+    }
 
-  public String getWebpageUrl() {
-    return webpageUrl;
-  }
+    public String getLicense() {
+        return license;
+    }
 
-  public String getWebpageUrlBasename() {
-    return webpageUrlBasename;
-  }
+    public String getUploaderId() {
+        return uploaderId;
+    }
 
-  public String getResolution() {
-    return resolution;
-  }
+    public String getUploader() {
+        return uploader;
+    }
 
-  public int getWidth() {
-    return width;
-  }
+    public String getPlayerUrl() {
+        return playerUrl;
+    }
 
-  public int getHeight() {
-    return height;
-  }
+    public String getWebpageUrl() {
+        return webpageUrl;
+    }
 
-  public String getFormat() {
-    return format;
-  }
+    public String getWebpageUrlBasename() {
+        return webpageUrlBasename;
+    }
 
-  public String getExt() {
-    return ext;
-  }
+    public String getResolution() {
+        return resolution;
+    }
 
-  public HttpHeader getHttpHeader() {
-    return httpHeader;
-  }
+    public int getWidth() {
+        return width;
+    }
 
-  public List<String> getCategories() {
-    return categories;
-  }
+    public int getHeight() {
+        return height;
+    }
 
-  public List<String> getTags() {
-    return tags;
-  }
+    public String getFormat() {
+        return format;
+    }
 
-  public List<VideoFormat> getFormats() {
-    return formats;
-  }
+    public String getExt() {
+        return ext;
+    }
 
-  public List<VideoThumbnail> getThumbnails() {
-    return thumbnails;
-  }
+    public HttpHeader getHttpHeader() {
+        return httpHeader;
+    }
+
+    public List<String> getCategories() {
+        return categories;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public List<VideoFormat> getFormats() {
+        return formats;
+    }
+
+    public List<VideoThumbnail> getThumbnails() {
+        return thumbnails;
+    }
+
+    public String getViewCount() {
+        return viewCount;
+    }
+
+    public String getLikeCount() {
+        return likeCount;
+    }
+
+    public String getDislikeCount() {
+        return dislikeCount;
+    }
+
+    public String getRepostCount() {
+        return repostCount;
+    }
+
+    public String getAverageRating() {
+        return averageRating;
+    }
+
+    @Override
+    public String toString() {
+        return "VideoInfo [id=" + id + ", fulltitle=" + fulltitle + ", title=" + title + ", uploadDate=" + uploadDate
+                + ", displayId=" + displayId + ", duration=" + duration + ", description=" + description
+                + ", thumbnail=" + thumbnail + ", license=" + license + ", viewCount=" + viewCount + ", likeCount="
+                + likeCount + ", dislikeCount=" + dislikeCount + ", repostCount=" + repostCount + ", averageRating="
+                + averageRating + ", uploaderId=" + uploaderId + ", uploader=" + uploader + ", playerUrl=" + playerUrl
+                + ", webpageUrl=" + webpageUrl + ", webpageUrlBasename=" + webpageUrlBasename + ", resolution="
+                + resolution + ", width=" + width + ", height=" + height + ", format=" + format + ", ext=" + ext
+                + ", httpHeader=" + httpHeader + ", categories=" + categories + ", tags=" + tags + ", formats="
+                + formats + ", thumbnails=" + thumbnails + "]";
+    }
 }
