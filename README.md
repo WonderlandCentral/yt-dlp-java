@@ -44,9 +44,8 @@ implementation("com.jfposton.ytdlp:yt-dlp-java:1.0")
 
 ---
 ## Basic Download Request Example
-
-// Video URL to download
 ```java
+// Video URL to download
 String videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
 // Destination directory (e.g., user's home folder)
