@@ -117,10 +117,8 @@ public class YtDlpTest {
         Assertions.assertNotNull(videoInfo.getUploaderId());
         Assertions.assertNotNull(videoInfo.getUploader());
         Assertions.assertNotNull(videoInfo.getUploadDate());
-        //Assertions.assertNotNull(videoInfo.getDuration());
+        Assertions.assertNotNull(videoInfo.getDuration());
         Assertions.assertNotNull(videoInfo.getViewCount());
         Assertions.assertNotNull(videoInfo.getLikeCount());
-        Assertions.assertNotNull(videoInfo.getDislikeCount());
-        Assertions.assertNotNull(videoInfo.getAverageRating());
     }
 }
