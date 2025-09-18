@@ -22,3 +22,6 @@ target/
 gradle
 
 .vscode/
+
+*.yaml~
+*.java~
